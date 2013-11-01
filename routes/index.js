@@ -1,5 +1,6 @@
 var config = require('./config.js');
 var mongo = require('mongodb');
+var snapclient = require('../snapfinder-client')
 
 var Server = mongo.Server,
     Db = mongo.Db,
