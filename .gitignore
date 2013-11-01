@@ -1,0 +1,11 @@
+*.log
+
+# Node
+node_modules/
+npm-debug.log
+
+# Cloud9 IDE
+.c9revisions/
+
+# vi
+*.swp
