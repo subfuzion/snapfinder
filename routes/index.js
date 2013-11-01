@@ -1,12 +1,12 @@
 var config = require('./config.js');
 var mongo = require('mongodb');
-var snapclient = require('../snapfinder-client')
+var snapclient = require('./snapfinder-client')
 
 var Server = mongo.Server,
     Db = mongo.Db,
     BSON = mongo.BSONPure;
 
-var server = new Server(config.MongoServer, 41168, {auto_reconnect: true});
+var server = new Server(config.MongoServer, {auto_reconnect: true});
 var db = new Db(config.MongoDB, server, {safe: true});
 
 db.open(function(err, client) {
@@ -17,6 +17,7 @@ db.open(function(err, client) {
 			console.log("db error: " + error);
 		});
 
+/*
 		client.authenticate(config.MongoDBUser, config.MongoDBPassword, function(err, success) {
 			if (success) {
 				console.log('authenticated with database');
@@ -26,6 +27,7 @@ db.open(function(err, client) {
 				console.log('error authenticating with database');
 			}
 		});
+*/
 	}
 });
 

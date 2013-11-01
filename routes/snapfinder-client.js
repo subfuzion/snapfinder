@@ -32,7 +32,7 @@ function findStoresInRangeLocation(location, range, callback) {
     });
 }
 
-**
+/**
  * Find nearby stores in ascending distance order.
  * @param address a valid address or address fragment
  * @param range a distance in miles

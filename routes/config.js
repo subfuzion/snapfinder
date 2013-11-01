@@ -4,7 +4,7 @@ config.env = process.env.NODE_ENV || 'development';
 
 config.rootURL = process.env.rootURL || '/';
 
-config.MongoServer = process.env.MongoServer || 'ds041168.mongolab.com';
+config.MongoServer = process.env.MongoServer || 'localhost';
 
 config.MongoDB = process.env.MongoDB || 'snapdb';
 
