@@ -1,6 +1,4 @@
 var config = require('./config.js');
-var mongo = require('mongodb');
-// var snapclient = require('./snapfinder-client');
 var snap = require('snapfinder-lib');
 
 snap.connect('mongodb://localhost/snapdb', function (err, client) {
