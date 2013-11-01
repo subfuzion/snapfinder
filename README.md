@@ -1,5 +1,7 @@
-snapfinder-lib
-==============
+SNAPfinder
+==========
+
+snapfinder.org
 
 Introduction
 ------------
