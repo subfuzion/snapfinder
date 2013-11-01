@@ -1,38 +1,30 @@
-$("form#findform").submit(function(e){
-    
-    e.preventDefault();
+$("form#findform").submit(function (e) {
 
-    var zipcode = document.getElementById('zipcode').value;
+  e.preventDefault();
 
-    //alert(zipcode);
+  var address = document.getElementById('address').value;
+  var range = document.getElementById('range');
+  var url = '/storelist?address=' + address + (range ? '&range=' + range.value : '&range=3');
 
-    $.ajax({
-        type: 'GET',
-        url: '/storelist/' + zipcode,
-        complete: function(r){
-		window.location.href = '/storelist/' + zipcode;
-        }
-        });  
-  
-});
-
-$("form#findform2").submit(function(e){
- 
-    e.preventDefault();
-
-    var zipcode = document.getElementById('zipcode').value;
-
-
-    $.ajax({
-        type: 'GET',
-        url: '/storelist/' + zipcode,
-        complete: function(r){
-                window.location.href = '/storelist/' + zipcode;
-        }
-        });
+  window.location.href = url;
 
 });
 
+$("form#findform2").submit(function (e) {
 
+  e.preventDefault();
 
+  var address = document.getElementById('address').value;
+  var range = document.getElementById('range');
+  var url = '/storelist?address=' + address + (range ? '&range=' + range.value : '&range=3');
+
+  $.ajax({
+    type: 'GET',
+    url: url,
+    complete: function (r) {
+      window.location.href = url;
+    }
+  });
+
+});
 
