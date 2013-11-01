@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "snapfinder",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -8,7 +8,6 @@
   "dependencies": {
     "express": "3.4.3",
     "ejs": "*",
-    "mongodb": ">=1.2.x",
     "qs": "~0.6.5",
     "request": "~2.27.0",
     "snapfinder-lib": "~0.0.4"
