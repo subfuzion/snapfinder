@@ -27,7 +27,8 @@
     <hr>
     <% for (var i = 0; i < stores.length; i++) { %>
     <% var store = stores[i]; %>
-    <p><a href="/storedetail/<%= store._id %>"><%= store.storeName %></a></p>
+    <!-- <p><a href="/storedetail/<%= store._id %>"><%= store.storeName %></a></p> -->
+    <p><a href="<%= store.mapPreviewUrl %>"><%= store.storeName %></a></p>
 
     <p class="text-muted">
       <small><%= store.address1 %> <%= store.city %> <%= store.state %> <%= store.zip5 %></small>
