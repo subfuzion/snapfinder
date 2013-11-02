@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--!DOCTYPE html>
 
 <html>
 <head>
@@ -20,19 +20,20 @@
                placeholder="Enter address">
       </div>
       <button type="submit" class="btn btn-success">Find</button>
-    </form>
+    </form-->
 
 
-    <h4>Found <%= stores.length %> locations in <%= result.zip5 %></h4>
+    <% include header%>
+
+    <div class="container">
+    <h4>Found <%= stores.length %> locations</h4>
     <hr>
     <% for (var i = 0; i < stores.length; i++) { %>
     <% var store = stores[i]; %>
-    <!-- <p><a href="/storedetail/<%= store._id %>"><%= store.storeName %></a></p> -->
-    <p><a href="<%= store.mapPreviewUrl %>"><%= store.storeName %></a></p>
-
+    <a href="<%= store.mapPreviewUrl %>"><p><%= store.storeName %></p>
     <p class="text-muted">
       <small><%= store.address1 %> <%= store.city %> <%= store.state %> <%= store.zip5 %></small>
-    </p>
+    </p></a>
     <hr>
     <% } %>
 
