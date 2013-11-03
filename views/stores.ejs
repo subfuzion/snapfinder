@@ -1,38 +1,13 @@
-<!--!DOCTYPE html>
-
-<html>
-<head>
-  <title><%= title %></title>
-  <meta name="viewport" content="width=device-width,
-        initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen"
-        href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" media="screen"
-        href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
-<body>
-  <div class="container">
-    <h2 class="text-muted">snapfinder.org</h2>
-
-    <form class="form-inline" role="form" id="findform2">
-      <div class="form-group">
-        <label class="sr-only" for="address">Address</label>
-        <input type="text" class="form-control" id="address"
-               placeholder="Enter address">
-      </div>
-      <button type="submit" class="btn btn-success">Find</button>
-    </form-->
-
-
     <% include header%>
 
     <div class="container">
-    <h4>Found <%= stores.length %> locations</h4>
+    <h5 class="text-muted">Found <%= stores.length %> locations <% if (stores.length > 0) { %> in <%= stores[0].city %>  <% } %>
+</h5>
     <hr>
     <% for (var i = 0; i < stores.length; i++) { %>
     <% var store = stores[i]; %>
-    <a href="<%= store.mapPreviewUrl %>"><p><%= store.storeName %></p>
-    <p class="text-muted">
-      <small><%= store.address1 %> <%= store.city %> <%= store.state %> <%= store.zip5 %></small>
+    <a href="<%= store.mapPreviewUrl %>"> <p style="text-align:left;"><%= store.storeName %><span style="float:right" class="text-success text-right"><small><%= store.distance.toFixed(1) %> mile</small></span></p>
+    <p><small><%= store.address1 %> <%= store.city %></small>
     </p></a>
     <hr>
     <% } %>
