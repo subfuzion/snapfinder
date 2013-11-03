@@ -27,11 +27,12 @@ $("form#findform").submit(function (e) {
   e.preventDefault();
 
   var address = document.getElementById('address').value;
-  var range = document.getElementById('range');
-  var url = '/storelist?address=' + address + (range ? '&range=' + range.value : '&range=3');
+  if (address) {
 
-  window.location.href = url;
-
+    var range = document.getElementById('range');
+    var url = '/storelist?address=' + address + (range ? '&range=' + range.value : '&range=3');
+    window.location.href = url;
+  }
 });
 
 $("form#findform2").submit(function (e) {
