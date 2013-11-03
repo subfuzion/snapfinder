@@ -29,7 +29,7 @@ exports.stores = function (req, res) {
       if (s.state) address += ',' + s.state;
       if (s.zip5) address += ',' + s.zip5;
       var latlng = '' + stores[i].latitude + ',' + stores[i].longitude;
-      var mapPreviewUrl = 'https://www.google.com/maps/preview#!q=' + encodeURIComponent(address);
+      var mapPreviewUrl = 'https://www.google.com/maps?t=m&q=' + encodeURIComponent(address);
       stores[i].mapPreviewUrl = mapPreviewUrl;
     }
 
