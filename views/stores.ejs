@@ -1,7 +1,7 @@
     <% include header%>
 
     <div class="container">
-    <h5 class="text-muted">Found <%= stores.length %> locations <% if (stores.length > 0) { %> near<br> <%= result.address %>  <% } %>
+    <h5 class="text-muted"><%= stores.length %> locations <% if (stores.length > 0) { %> near <%= result.address %>  <% } %>
 </h5>
     <hr>
     <% for (var i = 0; i < stores.length; i++) { %>
