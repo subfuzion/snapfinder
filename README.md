@@ -3,6 +3,11 @@ SNAPfinder
 
 snapfinder.org
 
+Related Projects
+----------------
+[snapfinder-lib]
+[snapfinder-api]
+
 Introduction
 ------------
 SNAPfinder is a mobile-first app for locating retailers that participate in the SNAP (formerly known as Food Stamps) program. It uses data provided by the USDA and imported daily into a MongoDB database to return nearby retailers for a given address, region, or geographic area in U.S. This project depends on two other open source projects: snapfinder-lib and snapfinder-api, which together provide the support for the cloud-hosted REST API this app uses. In addition to using this app, the REST API is available to developers to build their own SNAP applications.
@@ -43,3 +48,5 @@ SNAP Data
 [GitHub]:            https://github.com/
 [C9Chrome]:          https://chrome.google.com/webstore/detail/cloud9-button-for-github/gkddhhofgajgmgfebhaiihlahjmjkmph?hl=en-US
 [Cloud9]:            https://c9.io/
+[snapfinder-lib]:    https://github.com/tonypujals/snapfinder-lib
+[snapfinder-api]:    https://github.com/tonypujals/snapfinder-api
