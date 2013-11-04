@@ -4,8 +4,8 @@ SNAPfinder
 snapfinder.org
 
 #### Related Projects
-* [snapfinder-lib]
-* [snapfinder-api]
+* [snapfinder-api] - REST API for querying SNAP data (Node, Express)
+* [snapfinder-lib] - provides underlying support for importing and querying SNAP data (Node, MongoDB)
 
 Introduction
 ------------
