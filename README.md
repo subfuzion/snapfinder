@@ -3,8 +3,7 @@ SNAPfinder
 
 snapfinder.org
 
-Related Projects
-----------------
+#### Related Projects
 * [snapfinder-lib]
 * [snapfinder-api]
 
