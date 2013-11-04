@@ -7,8 +7,8 @@
     <% for (var i = 0; i < stores.length; i++) { %>
     <% var store = stores[i]; %>
     <a href="<%= store.mapPreviewUrl %>"> <p style="text-align:left;"><%= store.storeName %><span style="float:right" class="text-success text-right"><small><%= store.distance.toFixed(1) %> mile</small></span></p>
-    <p><small><%= store.address1 %> <%= store.city %></small>
-    </p></a>
+    <p class="text-muted"><small><%= store.address1 %> <%= store.city %></small></p>
+    </a>
     <hr>
     <% } %>
 

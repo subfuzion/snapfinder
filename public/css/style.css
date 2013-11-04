@@ -1,5 +1,4 @@
 body { 
-<<<<<<< HEAD
    font-size:18px; 
    font-family:Verdana, Geneva, sans-serif;
 }
@@ -13,15 +12,8 @@ a {
   text-decoration: none;
 }
 
-a:hover { 
-  color: blue; 
-  text-decoration: none;
-=======
-    padding-top: 65px;
-    background-color:#FFF;
-    font-family:"Arial", Gadget, sans-serif;
-    font-size:18px; 
->>>>>>> tony/master
+a:hover, a:hover p{
+    color: blue;
+    text-decoration: none;
 }
-
 
