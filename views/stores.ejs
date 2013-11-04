@@ -1,21 +1,28 @@
-    <% include header%>
+<% include header %>
 
-    <div class="container">
-    <h5 class="text-muted"><%= stores.length %> locations <% if (stores.length > 0) { %> near <%= result.address %>  <% } %>
-</h5>
-    <hr>
-    <% for (var i = 0; i < stores.length; i++) { %>
-    <% var store = stores[i]; %>
-    <a href="<%= store.mapUrl %>"> <p style="text-align:left;"><%= store.storeName %><span style="float:right" class="text-success text-right"><small><%= store.distance.toFixed(1) %> mile</small></span></p>
-    <p class="text-muted"><small><%= store.localAddress %></small></p>
-    </a>
-    <hr>
+<div class="container">
+  <h5 class="text-muted"><%= stores.length %> locations
+    <% if (stores.length > 0) { %>
+    near <%= result.address %>
     <% } %>
+  </h5>
+  <hr>
+  <% for (var i = 0; i < stores.length; i++) { %>
+  <% var store = stores[i]; %>
+  <a href="<%= store.mapUrl %>">
+    <p style="text-align:left;">
+      <%= store.storeName %>
+      <span style="float:right" class="text-success text-right">
+        <small><%= store.distance.toFixed(1) %> mile</small>
+      </span>
+    </p>
+    <p class="text-muted">
+      <small><%= store.localAddress %></small>
+    </p>
+  </a>
+  <hr>
+  <% } %>
 
-  </div>
+</div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="js/client.js"></script>
-</body>
-</html>
+<% include footer %>

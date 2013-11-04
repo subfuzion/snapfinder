@@ -1,25 +1,10 @@
-<!DOCTYPE html>
+<% include header %>
 
-<html>
-<head>
-  <title><%= title %></title>
-  <meta name="viewport" content="width=device-width,
-        initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <link rel="stylesheet" media="screen"
-        href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" media="screen"
-        href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
-</head>
-<body>
-  <div class="container">
-    <h4 class="text-muted"><%= items.storeName %></h4>
+<div class="container">
+  <h4 class="text-muted"><%= items.storeName %></h4>
 
-    <p>this is the detail page</p>
-  </div>
+  <p>this is the detail page</p>
+</div>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-  <script src="js/client.js"></script>
-</body>
+<% include footer %>
 
-</html>

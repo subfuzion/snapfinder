@@ -48,8 +48,10 @@ function getStoreById(id, callback) {
   snap.getStore(id, callback);
 }
 
-// note that a successful result is an object with 3 properties:
+// note that a successful result is an object with 5 properties:
 // * address - fully formatted address that was the best match for input
+// * localAddress - short form of address without state and zip
+// * location - object with latitude and longitude number properties
 // * zip5 - the 5 digit zip for the address
 // * stores - an array of store objects that matches the database format
 function getStores(address, range, callback) {
