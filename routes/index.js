@@ -18,25 +18,12 @@ exports.stores = function (req, res) {
   getStores(address, range, function (err, result) {
     if (err) console.error(err);
     if (!result) result = { address: address, zip5: '', stores: [] };
-
-    var stores = result.stores;
-
-    for (var i = 0; i < stores.length; i++) {
-      var s = stores[i];
-      var address = s.address1;
-      if (s.address2) address += ',' + s.address2;
-      if (s.city) address += ',' + s.city;
-      if (s.state) address += ',' + s.state;
-      if (s.zip5) address += ',' + s.zip5;
-      var latlng = '' + stores[i].latitude + ',' + stores[i].longitude;
-      var mapPreviewUrl = 'https://www.google.com/maps?t=m&q=' + encodeURIComponent(address);
-      stores[i].mapPreviewUrl = mapPreviewUrl;
-    }
-
+    if (!result.stores) result.stores = [];
+    
     res.render('stores', {
       title: 'SNAPfinder',
       result: result,
-      stores: stores,
+      stores: result.stores,
       metaKeywords: 'snapfinder stores'});
   });
 
