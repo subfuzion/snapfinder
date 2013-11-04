@@ -1,14 +1,14 @@
     <% include header%>
 
     <div class="container">
-    <h5 class="text-muted">Found <%= stores.length %> locations <% if (stores.length > 0) { %> in <%= stores[0].city %>  <% } %>
+    <h5 class="text-muted">Found <%= stores.length %> locations <% if (stores.length > 0) { %> near<br> <%= result.address %>  <% } %>
 </h5>
     <hr>
     <% for (var i = 0; i < stores.length; i++) { %>
     <% var store = stores[i]; %>
     <a href="<%= store.mapUrl %>"> <p style="text-align:left;"><%= store.storeName %><span style="float:right" class="text-success text-right"><small><%= store.distance.toFixed(1) %> mile</small></span></p>
-    <p><small><%= store.localAddress %></small>
-    </p></a>
+    <p class="text-muted"><small><%= store.localAddress %></small></p>
+    </a>
     <hr>
     <% } %>
 
