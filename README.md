@@ -5,8 +5,8 @@ snapfinder.org
 
 Related Projects
 ----------------
-[snapfinder-lib]
-[snapfinder-api]
+* [snapfinder-lib]
+* [snapfinder-api]
 
 Introduction
 ------------
@@ -50,3 +50,4 @@ SNAP Data
 [Cloud9]:            https://c9.io/
 [snapfinder-lib]:    https://github.com/tonypujals/snapfinder-lib
 [snapfinder-api]:    https://github.com/tonypujals/snapfinder-api
+
