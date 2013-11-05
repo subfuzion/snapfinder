@@ -29,6 +29,14 @@ exports.stores = function (req, res) {
 
 };
 
+exports.about = function (req, res) {
+
+      res.render('about', {
+      title: 'SNAPfinder',
+      metaKeywords: 'about snapfinder'});
+};
+
+
 exports.singlestore = function (req, res) {
 
   var id = req.params.id;

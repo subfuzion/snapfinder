@@ -1,8 +1,22 @@
-body { 
+body {
+   padding-top: 25px; 
    font-size:18px; 
    font-family:Verdana, Geneva, sans-serif;
 }
 
+h1 {
+  font-size: 150%;
+  display: inline;
+}
+
+img {
+   padding-right: 2px;
+}
+
+form {
+   padding-top: 14px;
+   padding-bottom: 12px;
+}
 h5 {
    margin-top: 20px;
 }
@@ -13,7 +27,11 @@ a {
 }
 
 a:hover, a:hover p{
-    color: blue;
+    color: green;
     text-decoration: none;
+}
+
+.panel-group {
+    padding-top: 20px;
 }
 
