@@ -6,22 +6,29 @@
     near <%= result.address %>
     <% } %>
   </h5>
-  <hr>
-  <% for (var i = 0; i < stores.length; i++) { %>
-  <% var store = stores[i]; %>
-  <a href="<%= store.mapUrl %>">
-    <p style="text-align:left;">
-      <%= store.storeName %>
-      <span style="float:right" class="text-success text-right">
-        <small><%= store.distance.toFixed(1) %> mile</small>
-      </span>
-    </p>
-    <p class="text-muted">
-      <small><%= store.localAddress %></small>
-    </p>
-  </a>
-  <hr>
-  <% } %>
+  
+<table class="table table-hover">
+     <tbody>
+     <% for (var i = 0; i < stores.length; i++) { %>
+     <% var store = stores[i]; %>
+        <tr>
+           <td>
+               <a href="<%= store.mapUrl %>">
+                  <p style="text-align:left;"><%= store.storeName %>
+                  <span style="float:right" class="text-success text-right">
+                    <small><%= store.distance.toFixed(1) %> mile</small>
+                  </span>
+                  <br>
+                  <p class="text-muted">
+                     <small><%= store.localAddress %></small>
+                  </p>
+                </a> 
+           </td>
+        </tr>
+     <% } %>
+     </tbody>
+</table>
+
 
 </div>
 
